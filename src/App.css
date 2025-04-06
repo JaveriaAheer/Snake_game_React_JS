@@ -1,38 +1,173 @@
-.App {
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  /* background-color: #b0f4a7; */
+  background-image: url('./img/garden2.jpeg'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
   text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 20px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.score {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.board {
+  position: relative;
+  background-color: #86592d;
+  border: 5px solid #333;
+}
+
+.snake {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+  border-radius: 4px;
+}
+
+.fruit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border: none;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 999;
+}
+
+.popup img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.popup h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.popup p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.popup button {
+  background-color: #00c853;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* .start-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffbb00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+} */
+
+.start-btn, .pause-btn, .resume-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffbb00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.pause-btn {
+  background-color: #ff6666;
+}
+
+.resume-btn {
+  background-color: #66cc66;
+}
+
+.countdown-box {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0);
+  /* border: 3px solid #333; */
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.countdown {
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  /* margin-top: 20px; */
+  /* margin-left: 10%; */
 }
+.fruit-info {
+  background-color: #fff7d1;
+  padding: 20px;
+  border: 2px solid #444;
+  border-radius: 12px;
+  font-size: 16px;
+  min-width: 180px;
+  max-height: 400px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.fruit-info ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.fruit-info li {
+  margin: 8px 0;
+}
+
+/* .snakeimg img {
+  width:70%;
+  height: 70%;
+  margin-top: 20%;
+} */
